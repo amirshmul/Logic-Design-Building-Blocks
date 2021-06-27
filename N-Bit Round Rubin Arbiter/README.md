@@ -5,10 +5,14 @@ Verilog source code [NBitRoundRubinArbiter.sv](https://github.com/ChrisShakkour/
 
 ![alt text](https://github.com/ChrisShakkour/Logic-Design-Building-Blocks/blob/main/N-Bit%20Round%20Rubin%20Arbiter/Figures/NBitRoundRubinArbiter_schematic.JPG)
 
-## Simulation Waveform N=5
+## Simulation Waveform N=5 & N=8
 SystemVerilog Simulation source code [NBitRoundRubinArbiter_tb.sv](https://github.com/ChrisShakkour/Logic-Design-Building-Blocks/blob/main/N-Bit%20Round%20Rubin%20Arbiter/Sim_src/NBitRoundRubinArbiter_tb.sv)
 
+### N=8 Acknowledge always on
 ![alt text](https://github.com/ChrisShakkour/Logic-Design-Building-Blocks/blob/main/N-Bit%20Round%20Rubin%20Arbiter/Figures/8BitRoundRubin_Ack_waveform.JPG)
+
+### N=5 Acknowledge active every 3 cycles
+![alt text](https://github.com/ChrisShakkour/Logic-Design-Building-Blocks/blob/main/N-Bit%20Round%20Rubin%20Arbiter/Figures/5BitRoundRubin_waveform.JPG)
 
 
 # N-Bit Counter Clockwise Shift Ring
