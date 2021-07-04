@@ -53,6 +53,13 @@ always_ff @(posedge clk or posedge rst) begin
         end 
     end 
 end
+// Amir: in a register you don't need to write "default" value, if non of the "if" statements holds, no assignment is made, and the FF holds the priovious value.
+// I would write:
+always_ff @(posedge clk or posedge rst) 
+  if (rst)                           bus_priority <= '0;
+  else if (valid && arbitration_ack) bus_priority <= next_priority;
+    
+
 endmodule
 
 /*Arbitration Acknowledge*/
@@ -64,6 +71,8 @@ drives the enable of the D-Flipflops,
 once the achnowledge is active the 
 next priority is able to propagates into
 the output.
+
+// Amir: great! you got it...
 */
 
 
