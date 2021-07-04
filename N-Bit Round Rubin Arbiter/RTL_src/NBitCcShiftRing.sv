@@ -13,6 +13,11 @@ module NBitCcShiftRing #(parameter W_DATA=32)(
         shift_compliment = W_DATA-shift_value;
         bitline_out = (bitline_in<<shift_value)|
                       (bitline_in>>shift_compliment);
+        // This logic implement CyclicShiftLeft, didn't you want to implement CyclicShiftRight?
+        // Anyway, another way to write it (same logic)
+        // bitline_duplicate = {bitline_in, bitline_in};
+        // bitline_duplicate_shift = bitline_duplicate << shift_value;
+        // bitline_out = bitline_duplicate_shift[W_DATA+:W_DATA];
         bitline_valid = (shift_value>W_DATA)? 1'b0: 1'b1;
     end
 endmodule
