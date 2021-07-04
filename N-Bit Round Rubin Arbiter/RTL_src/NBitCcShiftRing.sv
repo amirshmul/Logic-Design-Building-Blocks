@@ -45,11 +45,19 @@ if not, then what is the best way to find the number of bits
 needed to present an integer N 
 Ex. an N bit Encoder has N inputs and (ceiling(log_base_2(N))) outputs.   
 
+// Amir: $clog2() is very usefull, you will use it a lot.
+
 2. you mentioned not to implement a full adder by gates but use the '+' operator
 insted, how can i know or ensure which adder is being implemented?
 there are many types of adders and when i code x+y for an n bit
 numbers, what is the synthisyzed adder? (carry propagate, carry loockahead or parallel prefix)?
 do we have control over which adder is synthisized?
+
+// Amir: This is a good question, the short answer is:
+// We are letting the synthesis tool to decide which adder to implement. 
+// This is the idea of "logic design", logically, all adders are the same, right?
+// In sepciel cases, we do a more hand-crafted work. We can talk about it more once you are here.
+
 */
 
 /*acknoledgments*/
@@ -61,5 +69,7 @@ do we have control over which adder is synthisized?
  Ex. -3 = 3'b101 in 2's-complement,
  by using >> the result is 3'b010.
  by using >>> the result is 3'b110.
+ 
+ // Amir: :)
 
 */
